@@ -10,89 +10,86 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
 </style>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Research</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Publications</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Students</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Teaching</a>
+  <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-blue w3-large w3-indigo" href="javascript:void(0);" onclick="toggleMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a onclick="loadContent('contentSection1', './home.html')" href="#" class="w3-bar-item w3-button w3-padding-large w3-blue">Home</a>
+    <a onclick="loadContent('contentSection1', './research.html')" href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Research</a>
+    <a onclick="loadContent('contentSection1', './publications.html')" href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Publications</a>
+    <a onclick="loadContent('contentSection1', './students.html')" href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Students</a>
+    <a onclick="loadContent('contentSection1', './teaching.html')" href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Teaching</a>
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Research</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Publications</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Students</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
+  <div id="navDemo" class="w3-bar-block w3-indigo w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a onclick="loadContent('contentSection1', './research.html')" href="#" class="w3-bar-item w3-button w3-padding-large">Research</a>
+    <a onclick="loadContent('contentSection1', './publications.html')" href="#" class="w3-bar-item w3-button w3-padding-large">Publications</a>
+    <a onclick="loadContent('contentSection1', './students.html')" href="#" class="w3-bar-item w3-button w3-padding-large">Students</a>
+    <a onclick="loadContent('contentSection1', './teaching.html')" href="#" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:64px 16px">
   <h1 class="w3-margin w3-jumbo">DR. CLAUS RINNER</h1>
-  <!--p class="w3-xlarge">Template by w3.css</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button-->
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <h1>Bio Sketch</h1>
-    <h5 class="w3-padding-32">Dr. Claus Rinner is a Professor in the Department of Geography and Environmental Studies at Ryerson University (Toronto, Canada). Dr. Rinner joined Ryerson in 2006 and served as Graduate Program Director (2007-2012, 2013-2015, 2018) and Department Chair (2015-2018). He holds a Bachelor's degree (1993) in Mathématiques appliquées et sciences sociales from Université Paul-Valéry Montpellier 3, France, a Master's degree (1996) in Applied Systems Science from the University of Osnabrück, Germany, and a PhD (1999) in Geography from the University of Bonn. After a brief stint as a software developer, he taught at the Institute for Geoinformatics at the University of Münster (2001-2003) and the Department of Geography and Programme in Planning at the University of Toronto (2003-2006).</h5>
-
-    <p class="w3-text-grey">Within Geographic Information Science, Dr. Rinner specializes in geographic visualization and multi-criteria decision analysis to support effective spatial decision-making. He develops map-centred, exploratory methods to evaluate phenomena such as public health and urban quality of life. Dr. Rinner also works on Geographic Information Systems (GIS) concepts to support participatory planning, and investigates the decision support capabilities of GIS technologies such as Location-Based Services and Spatial Data Infrastructures.</p>
-    <p class="w3-text-grey">Dr. Rinner is co-author of a 2015 Springer monograph on Multicriteria Decision Analysis in Geographic Information Science, which summarizes the results of two NSERC Discovery Grants held 2004-09 and 2011-16. The research published in Dr. Rinner's 33 peer-reviewed articles and other works was also funded by the GEOIDE Network of Centres of Excellence (2005-09, 2009-12), a SSHRC Insight Development Grant (2012-14), and an ongoing SSHRC Partnership Grant (2013-19). Dr. Rinner has an h-index of 25 and seven publications with over 100 citations.</p>
-    <p class="w3-text-grey">Dr. Rinner teaches cartography and GIS courses at Ryerson. As the graduate program director for the Master of Spatial Analysis (MSA), he has also been responsible for the MSA practicum placements and the graduate students' major research papers and theses.</p>
-
+  <div id="contentSection1" class="w3-content">
   </div>
 </div>
 
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div id="contentSection2" class="w3-content">
+  </div>
+</div>
+
+<!-- Pre-Footer -->
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+      <i class="fa fa-map-marker w3-padding-64 w3-text-blue" style="font-size:200px;"></i>
     </div>
 
-    <div class="w3-twothird">
-  <h1 class="w3-margin w3-xlarge">Contact Information: </h1>
-        <pre>
+    <div id="contactInfo" class="w3-twothird w3-left-align">
+  <h1 class="w3-xlarge">Contact Information: </h1>
+    <p>
 Dr. Claus Rinner
-Department of Geography and Environmental Studies
-Ryerson University
-350 Victoria Street
-Toronto ON  M5B 2K3
+    </p>
+    <p>
+Department of Geography and Environmental Studies<br>
+Ryerson University<br>
+350 Victoria Street<br>
+Toronto ON  M5B 2K3<br>
 Canada 
-Office JOR-606 (Jorgenson Hall)
-Phone 416 979 5000 ext. 2686
-Fax 416 979 5362 (departmental) 
-
-http://people.ryerson.ca/crinner/
-http://gis.blog.ryerson.ca/</pre>
+    </p>
+    <p>
+Email crinner at ryerson dot ca<br>
+Phone 416 979 5000 ext. 2686 (email preferred)
+    </p>
     </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://gis.blog.ryerson.ca/" target="_blank"><i class="fa fa-wordpress w3-hover-opacity"></i></a>
+    <a href="https://scholar.google.com/citations?user=r6_llJEAAAAJ&pagesize=100" target="_blank"><i class="fa fa-graduation-cap w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/ClausRinner" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/claus-rinner-ba2764141/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
  </div>
  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 <script>
+
 // Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
+function toggleMenu() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
@@ -100,6 +97,21 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+// USed to load external contents into page sections
+function loadContent(section, filename) {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("section").innerHTML = xhttp.responseText;
+    }
+  };
+
+  xhttp.open("GET", filename, true);
+  xhttp.send();
+}
+
 </script>
 
 </body>
